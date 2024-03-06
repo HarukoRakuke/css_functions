@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <script src="./javascript/jquery-3.7.1.js" charset="utf-8"></script>
+    <script src="./javascript/script.js"></script>
+  </head>
+  <body>
+    <nav class="menubar"></nav>
+    <nav class="sidebar">
+      <ol>
+        <li><a href="#1">План</a></li>
+        <li><a href="#2">CSS — Что это?</a></li>
+        <li><a href="#3">Современные тренды</a></li>
+        <li><a href="#4">Переменные CSS</a></li>
+        <li><a href="#5">Таймлайн анимации</a></li>
+        <li><a href="#6">Тригонометрические функции</a></li>
+        <li><a href="#7">Вложения CSS</a></li>
+        <li><a href="#8">Выводы</a></li>
+        <li><a href="#9">Библиография</a></li>
+      </ol>
+    </nav>
+    <article>
+      <h1>Интересные необычные свойства CSS</h1>
+      <div class="row">
+        <span>Цимайло</span>
+        <span>Ветошкина</span>
+        <span>Березина</span>
+      </div>
+      <div class="divider"></div>
+      <p>
+        При изучении этого языка мы обратили внимание, что использование
+        подобных функций недостаточно распространено среди
+        фронтенд-разработчиков
+      </p>
+      <p>
+        Поэтому мы решили изучить необычные функции CSS и узнать, насколько они
+        популярны
+      </p>
+      <h1 id="2">CSS — что это?</h1>
+      <div class="comment">› Инструмент для веб-разработки</div>
+      <div class="divider"></div>
+      <p>
+        CSS (Сascading Stylesheets) — язык для определения того, как документы
+        представляются пользователям — как они стилизованы, оформлены и т.д.
+      </p>
+      <p>
+        C его помощью веб-разработчики придают базовым элементам HTML уникальный
+        дизайн. Например,можно задать тексту цвет или расположить изображение.
+        Постепенно CSS развивается: на данный момент последней версией является
+        CSS3, которая постоянно обновляется.
+      </p>
+      <h1 id="3">Современные тренды</h1>
+      <div class="row">
+        <span> Упрощение </span>
+        <span>Многофункциональность</span>
+      </div>
+      <div class="divider"></div>
+      <p>
+        Развитие CSS приводит к тому, что он упрощает жизнь разработчикам
+        введением более удобных функций. Кроме того, вводятся методы, которые
+        позволяют создавать эффекты ранее недоступные веб-разработчикам.
+      </p>
+      <h1 id="4">Переменные CSS</h1>
+      <div class="divider"></div>
+      <div class="data-container">
+        <div>Дата введения: <br />2017 г.</div>
+        <div>
+          Осведомлены: <br />
+          98.7% опрошенных
+        </div>
+        <div>
+          Используют: <br />
+          93% опрошенных
+        </div>
+      </div>
+      <p>
+        Переменные позволяют быстро адаптировать дизайн при изменении каких‑либо
+        параметров. Например, если базовые цвета вашего макета поменялись
+        и вы назначали их через переменные, вам достаточно их изменить в
+        переменных, а не менять во всех элементах.
+      </p>
+      <div class="flex">
+        <div class="card">
+          .div { <br />
+          &#160&#160background-color: blue; <br />} <br />.span { <br />
+          &#160&#160background-color: blue; <br />}
+        </div>
+        <div class="card highlighted">
+          :root { <br />&#160&#160--main-color: blue; <br />
+          } <br />.div { <br />&#160&#160background-color: var(--main-color); <br />}
+          <br />
+          <br />.span { <br />&#160&#160background-color: var(--main-color); <br />
+          }
+        </div>
+      </div>
+      <p>
+        Нестандартное использование переменных расширяет возможности: например
+        интерполяция (переход) градиентов. Задавая тип данных для переменной,
+        мы даем браузеру понять, что конкретно требуется поменять
+        в сложнообрабатываемых функциях. В случае градиентов — это цвет,
+        проценты градиента, его угол и т.д.
+      </p>
+      <div class="section_with_circle1">
+<div class="circle_canvas"></div>
+      </div>
+      <div class="flex">
+      <div class="card">
+        @property --x { <br>
+        &#160&#160syntax: '<percentage>'; <br>
+          &#160&#160inherits: false; <br>
+          &#160&#160initial-value: 10%; <br>
+        } <br>
+        @property --y { <br>
+        &#160&#160syntax: '<percentage>'; <br>
+          &#160&#160inherits: false; <br>
+          &#160&#160initial-value: 10%; <br>
+        }<br>
+        
+        box { <br>
+          &#160&#160transition: --x 0.2s, --y 0.2s; <br>
+          &#160&#160background: radial-gradient( <br>
+          &#160&#160&#160&#160circle at var(--x) var(--y), <br>
+          &#160&#160&#160&#160blue 20%, <br>
+          &#160&#160&#160&#160white 30%, <br>
+          &#160&#160&#160&#160blue 50% <br>
+            &#160&#160&);<br>
+        } <br>
+      </div>
+    </div>
+      <h1 id="5">Таймлайн анимации</h1>
+      <div class="divider"></div>
+      <div class="data-container">
+        <div>
+          Дата введения: <br />
+          2023 г.
+        </div>
+        <div>
+          Осведомлены: <br />
+          87% опрошенных
+        </div>
+        <div>
+          Используют: <br />
+          80% опрошенных
+        </div>
+      </div>
+      <p class="id">
+        С помощью этой функции эффект Paralaxa теперь достигается даже без JS.
+        Paralax - это явление, при котором разные слои одного
+        и того же изображения двигаются с разной скоростью, создавая иллюзию
+        глубины. Важно, что теперь мы можем анимировать наши объекты
+        непосредственно при прокрутке, используя scroll() и view().
+      </p>
+      <div class="flex triangles">
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+      <div class="triangle"></div>
+    </div>
+      <h1 id="6" lang="ru">Тригонометрические функции</h1>
+      <div class="divider"></div>
+      <div class="data-container">
+        <div>
+          Дата введения: <br />
+          2023 г.
+        </div>
+        <div>
+          Осведомлены: <br />
+          80% опрошенных
+        </div>
+        <div>
+          Используют: <br />
+          10% опрошенных
+        </div>
+      </div>
+      <p>
+        На данный момент CSS умеет обрабатывать 8 тригонометрических функций:
+        sin(), cos(), tan(), asin(), acos(), atan(), and atan2(). С их помощью
+        можно описывать движения практически любого характера, так как мы можем
+        эффективно обращаться к углу поворота и т.д. Одним из базовых, но
+        наглядных примеров является вращение объекта по кругу.
+      </p>
+      <div class="section_with_trig">
+            <div class="dot"></div>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="card popup">
+          x = cos(a) * r <br>
+          y = sin(a) * r
+        </div>
+        <div class="card">
+          translateX: calc(cos((var(--angle) + var(--angle-offset))) * var(--radius))<br>
+          translateY: calc(sin((var(--angle) + var(--angle-offset))) * var(--radius) * -1);
+        </div>
+      </div>
+      <h1 id="7">Вложения CSS</h1>
+      <div class="divider"></div>
+      <div class="data-container">
+        <div>
+          Дата введения: <br />
+          2021 г.
+        </div>
+        <div>
+          Осведомлены: <br />
+          88% опрошенных
+        </div>
+        <div>Используют: <br />27% опрошенных</div>
+      </div>
+      <p>
+        Вложения и нововведенные селекторы, как :has(), :where(), :is()
+        позволяют упрощать процесс написания кода. Они просто минимизируют
+        повторения и делают код более структурным.
+      </p>
+      <div class="flex">
+        <div class="card">
+          .parent1 .child1, <br />.parent2 .child1 {  <br />&#160&#160&color: red; <br />} <br />.parent1 .child2, <br />.parent2 .child2 { <br /> &#160&#160&color: green; <br />} <br />.parent1 .child2:hover, <br />.parent2 .child2:hover { <br /> &#160&#160&color: blue; <br />}
+        </div>
+        <div class="card highlighted">
+          .parent1, .parent2 {  <br /> &#160&#160.child1 {   <br /> &#160&#160&#160&#160color: red; <br /> &#160&#160}  <br />&#160&#160.child2 {   <br />&#160&#160&#160&#160color: green;    <br /> &#160&#160&#160&#160&:hover { <br />     &#160&#160&#160&#160&#160&#160color: blue;<br />   &#160&#160&#160&#160} <br /> &#160&#160}<br />}
+        </div>
+      </div>
+      <h1 id="8">Выводы</h1>
+      <div class="divider"></div>
+      <p>
+        Таким образом мы выяснили, что есть функции популярные, такие как
+        таймлайн анимаций и переменные CSS, и есть те, которые используются
+        существенно реже, по типу тригонометрических функций и вложений CSS,
+        которые тем не менее могут быть интересны для разработчиков
+      </p>
+      <div class="table">
+        <div class="left_column">
+          <p class="li">Тригонометрические функции</p>
+          <p class="li">Вложения CSS</p>
+          <p class="li">Таймлайн анимации</p>
+          <p class="li">Переменные CSS</p>
+        </div>
+        <div class="right_column">
+          <div>10%</div>
+          <div>28%</div>
+          <div>80%</div>
+          <div>90%</div>
+        </div>
+      </div>
+      <h1 id="9">Библиография</h1>
+      <div class="divider"></div>
+      <div class="link"><a href="https://dev.to/afif/we-can-finally-animate-css-gradient-kdk">
+        <h2>We can finally animate CSS gradient</h2>
+        <p>Thanks to the new @property defined in the CSS Properties and Values API Level 1 specification we can now have transition with custom properties (aka CSS variables).</p>
+      </a></div>
+      <div class="link"><a href="https://blog.logrocket.com/css-trig-functions-practical-applications/">
+        <h2>CSS trig functions: Practical applications</h2>
+        <p>Several trigonometry functions have been added to CSS and they are now supported in all major browsers. Having the mathematical power of trig available in CSS opens up some interesting possibilities!</p>
+      </a></div>
+      <div class="link"><a href="https://web.dev/articles/css-trig-functions">
+        <h2>Using Trigonometric functions in CSS</h2>
+        <p>Often neglected as ‘merely a styling language’, CSS contains a wealth of functions built right into the browser’s rendering engine that can perform everything from animations to typography and even...</p>
+      </a></div>
+      <div class="link"><a href="https://2023.stateofcss.com/en-US/features/">
+        <h2>State of CSS 2023</h2>
+        <p>TCSS is going through a period of unprecedented progress. Between :has(), container queries, subgrid, and many more, new features are making their way to browsers seemingly every month.</p>
+      </a></div>
+      <div class="link"><a href="https://blog.logrocket.com/advanced-guide-css-has-selector/#:~:text=The%20%3Ahas()%20in%20CSS,and%20then%20style%20it%20accordingly.">
+        <h2>The advanced guide to the CSS :has() selector</h2>
+        <p>The CSS :has() pseudo-class has been one of the most-awaited features for years. It’s a level 4 CSS selector, now available as a fully supported feature in Chrome 105 onwards, and will likely become...
+        </p>
+      </a></div>  
+    </article>
+    <footer>
+      <p>Ветошкина Елена — автор концепции, редактор; Елизавета Цимайло — верстка; Полина Березина — дизайн; ссылка на репозиторий Github; Ветошкина Елена — автор концепции, редактор; Елизавета Цимайло — верстка; Полина Березина — дизайн; ссылка на репозиторий Github; Ветошкина Елена — автор концепции, редактор; Елизавета Цимайло — верстка; Полина Березина — дизайн; ссылка на репозиторий Github;</p>
+    </footer>
+    <script>
+      $(function () {
+        $('.sidebar a').each(function () {
+          $(this).on('click', function (e) {
+            e.preventDefault();
+            var scrollTo = $(this).attr('href');
+            var extraOffsetInViewport = 0.1; // Adjust this value for the desired extra offset in viewports
+            var viewportHeight = $(window).height();
+            var extraOffsetInPixels = extraOffsetInViewport * viewportHeight;
+            var whitespace =
+              scrollTo == '#s1'
+                ? 70 + extraOffsetInPixels
+                : 30 + extraOffsetInPixels;
+            $('html,body').animate(
+              {
+                scrollTop: $(scrollTo).offset().top - whitespace,
+              },
+              1000
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

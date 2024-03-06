@@ -1,0 +1,67 @@
+.sidebar {
+  overflow: hidden;
+  position: fixed;
+  top: 8vw;
+  left: 5vw;
+}
+.sidebar::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0%;
+  height: 100%;
+  border-right: 0.1vw solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover,
+  &:active,
+  &:visited {
+    color: black;
+  }
+}
+ol {
+  padding-left: 3vw;
+}
+li {
+  font-size: 1.6vw;
+  margin-top: 0.5em;
+  position: relative;
+}
+li:nth-of-type(1) {
+  font-size: 4.2vw;
+  margin-top: 0;
+}
+li:nth-of-type(2) {
+  margin-top: 1.2em;
+}
+li:before {
+  position: absolute;
+  content: '';
+  left: -100%;
+  top: 50%;
+  width: 100%;
+  border-top: 0.1vw solid black;
+}
+li:nth-of-type(9)::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  left: -100%;
+  background-color: white;
+  top: 50%;
+  width: 100%;
+  border-top: 0.1vw solid black;
+}
+li:nth-of-type(1)::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  left: -100%;
+  background-color: white;
+  width: 100%;
+  top: -50%;
+  border-bottom: 0.1vw solid black;
+}
